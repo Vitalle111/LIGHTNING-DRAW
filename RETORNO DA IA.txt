@@ -1,0 +1,18 @@
+Para implementar o pagamento real via Lightning Network, você precisará:
+
+
+Escolher um Provedor de Pagamento Lightning: Existem várias opções como BTCPay Server, OpenNode, LNBits, entre outros. Cada um tem suas próprias APIs e formas de integração.
+
+Obter Credenciais da API: Após escolher um provedor, você precisará se registrar e obter as chaves de API necessárias para se comunicar com o serviço deles.
+
+Integrar a API no Código:
+
+Na função handleLightningPayment no arquivo src/components/PurchaseDialog.jsx, você substituiria a simulação atual pela lógica de chamada à API do seu provedor.
+
+Isso geralmente envolve:
+
+Enviar uma requisição para o provedor para gerar uma fatura Lightning (invoice).
+
+Exibir essa fatura para o usuário (geralmente como um QR Code ou uma string de fatura).
+
+Ter um mecanismo para verificar o status do pagamento dessa fatura (alguns provedores oferecem webhooks ou endpoints de consulta).
